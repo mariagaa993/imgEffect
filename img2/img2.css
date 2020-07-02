@@ -1,0 +1,119 @@
+/*---------------------------------*/
+body {
+    background: linear-gradient(to right, #c02425, #f0cb35);
+	height: 625px;
+    margin: 0;
+}
+
+h1 {
+    color: #ffffff;
+    font-family: 'Righteous', cursive;
+    font-size: 50px;
+    letter-spacing: 2px;
+	margin-top: 0;
+	padding-top: 5%;
+    text-align: center; 
+    text-transform: uppercase;
+}
+
+/* navbar ---------------------------------*/
+.navbar{
+	display: flex;
+	justify-content: center;
+	list-style: none;
+}
+
+.navbar li {
+    display: inline-block;
+    padding: 30px 20px 30px 0;
+}
+
+.navbar a {
+    background-color: #ffffff;
+	box-shadow: 0.5px 0.5px 3px #000;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+	padding: 10px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.navbar a.active {
+	color: #000;
+}
+
+.navbar a:hover {
+    background-color: #000;
+	color: #ffffff;
+}
+
+/* container ---------------------------------*/
+.container {
+    border: 10px solid #ffffff;
+    box-shadow: 1px 1px 5px #000;
+    margin: 3% auto;
+    overflow: hidden;
+    position: relative;
+    width: 30%;
+}
+
+.container img {
+    display: block;
+    max-width: 100%;
+    position: relative
+}
+
+.overlay, .overlay-content {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.container .overlay { 
+	background-color: rgba(219,127,8, 0.7); 
+	height: 300px;
+	opacity: 0;
+    padding: 110px;
+	transform: translate(265px, 145px) rotate(45deg);
+    transition: all 0.2s ease-in-out;
+    width: 300px;
+}
+
+.overlay-content h1 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    color: #000000;
+    font-family: 'Righteous', cursive;
+    font-size: 25px;
+    margin: 20px 40px 0px 40px;
+    padding: 10px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;  
+    transform: translate(200px, -200px);
+	transition: all 0.2s ease-in-out;
+}
+
+.overlay-content p {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 20px 20px;
+    position: relative;
+    text-align: center;
+    transform: translate(-200px, 200px);
+	transition: all 0.2s ease-in-out;
+}
+
+.container:hover .overlay { 
+	opacity:1; 
+	transform: translate(-80px, -125px) rotate(45deg);
+}							  
+.overlay-content:hover h1 { 
+	transform: translate(0px,0px);
+	transition-delay: 0.2s; 
+}
+.overlay-content:hover p { 
+    transform: translate(0px,0px); 
+	transition-delay: 0.3s;
+}
